@@ -1,12 +1,16 @@
 
+
+const fileName = ".appconfig";
+
+const load = () => {
+    
+    return null;
+};
+
+
 const hasConfig = () => {
 
     return false;
-};
-
-const load = () => {
-
-    return null;
 };
 
 const save = (results) => {

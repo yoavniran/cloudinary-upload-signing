@@ -1,7 +1,7 @@
 const prompt = require("prompt"),
     smocker = require("smocker"),
+    colors = require("colors/safe")
     configHelper = require("./config");
-
 
 //chcek for config file
 //if not found - show prompts (port, api key, secret)
@@ -18,32 +18,32 @@ const start = () =>{
     });   
 }
 
-if (!process.env.CONFIG || !configHelper.hasConfig()) {
+if (process.env.config || !configHelper.hasConfig()) {
     prompt.message = "";
     prompt.start({});
 
     prompt.get({
         properties: {
             key: {
-                description: "Your cloud's api key (can be provided by prepare method)",            
+                description: colors.blue("Your cloud's api key (can be provided by prepare method)"),            
                 required: false,
             },
             secret: {
-                description: "Your cloud's api secret",
-                message: "secret is required",
+                description:  colors.blue("Your cloud's api secret"),
+                message: colors.red("secret is required"),
                 required: true,
             },
             port: {
-                description: "Run on port (default: 9991)",
-                message: "Must be a number",
+                description:  colors.blue("Run on port (default: 9991)"),
+                message: colors.red("Must be a number"),
                 pattern: /\d+/,
                 required: false,
-            }
+            },
         },
     }, (err, results) => {
         if (err) {
             if (err.message ===  "canceled"){
-                console.log("\nbye");
+                console.log(colors.gray("\nbye"));
             }
             else{
                 console.error("ERR!", err);
@@ -51,8 +51,7 @@ if (!process.env.CONFIG || !configHelper.hasConfig()) {
         }
         else {
             configHelper.save(results);
-            console.log(results);
-            // start();
+            start();
             prompt.stop();
         }
     });
