@@ -1,16 +1,32 @@
 
+const fs = require ("fs-extra");
 
 const fileName = ".appconfig";
 
+let loadedConfig = null;
+
 const load = () => {
+
+
     
+
     return null;
 };
 
 
-const hasConfig = () => {
+const isValid = (config) => {
+    let valid = false;
 
-    return false;
+   if ( config){
+        if (config.secret){
+            const port = Number(config.port);
+            if (port && !Number.isNaN(port)){
+                valid = true;   
+            }
+        }
+   }
+
+   return valid;
 };
 
 const save = (results) => {
@@ -19,7 +35,7 @@ const save = (results) => {
 };
 
 module.exports = {
-    hasConfig,
+    isValid,
     load,
     save,
 };
