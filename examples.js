@@ -1,5 +1,4 @@
 const signatureExample = function () {
-
     const makeAjaxRequest = (url, data, cb) =>
         $.ajax({
             url,
@@ -28,7 +27,6 @@ const signatureExample = function () {
         upload_signature: getSignature,
         //!!!!!!!!!
     });
-
 };
 
 const prepareExample = function () {
