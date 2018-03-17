@@ -1,18 +1,22 @@
 
 const fs = require ("fs-extra");
 
-const fileName = ".appconfig";
+const fileName = "./.appconfig";
 
 let loadedConfig = null;
 
-const load = () => {
+const load = () => {    
+    try{
+        if (fs.existsSync(fileName)){
+            loadedConfig = fs.readJsonSync(fileName);
+        }
+    }
+    catch(ex){
+        console.error("failed to read config file", ex);
+    }
 
-
-    
-
-    return null;
+    return loadedConfig;
 };
-
 
 const isValid = (config) => {
     let valid = false;
@@ -29,9 +33,8 @@ const isValid = (config) => {
    return valid;
 };
 
-const save = (results) => {
-
-
+const save = (config) => {
+    fs.outputJSONSync(fileName, config);
 };
 
 module.exports = {
