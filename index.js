@@ -54,16 +54,16 @@ const promptForConfig = (config, callback) => {
         properties: {
             key: {
                 description:
-                    colors.blue(`Your cloud's api key ${config.key ? `(${config.key})` : ""}`),
+                    colors.cyan(`Your cloud's api key ${config.key ? `(${config.key})` : ""}`),
                 required: false,
             },
             secret: {
-                description: colors.blue(`Your cloud's api secret ${config.secret ? `(${config.secret})` : ""}`),
+                description: colors.cyan(`Your cloud's api secret ${config.secret ? `(${config.secret})` : ""}`),
                 message: colors.red("secret is required"),
                 required: !config.secret,
             },
             port: {
-                description: colors.blue(`Run on port ${config.port ? `(${config.port})` :  ""}`),
+                description: colors.cyan(`Run on port ${config.port ? `(${config.port})` :  ""}`),
                 message: colors.red("Must be a number"),
                 pattern: /\d+/,
                 required: false,

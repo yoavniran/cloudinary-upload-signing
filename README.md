@@ -33,6 +33,7 @@ If you'd like to change one of these settings run the app with: _yarn start -c_ 
 
 The app supports the following arguments:
 
+```
   config:  --config or -c   	- Use to show configuration prompts
   example: --example or -e   	- Prints client-side examples to the console
   port:    --port or -p   	    - The port to run this app on (default: 9991)
@@ -40,6 +41,7 @@ The app supports the following arguments:
   secret:  --secret or -s   	- The Cloudinary cloud API secret
   help:    --help or -?   	    - Show this help screen
   
+```
  
 ## Code Examples
 
