@@ -11,7 +11,11 @@ It supplies two endpoints for use with the [Upload Widget](https://cloudinary.co
 
 ## Running
 
-Running this app will make a nodejs server run over a port (default: 9991) but you can change that. 
+simply run: 
+
+> yarn start
+
+Running this app will make a nodejs server run over a specified port (default: 9991) which you can determine. 
 Once running you can make an HTTP request to the following:
 
 ```
@@ -27,7 +31,7 @@ The first time you run the app it will prompt you to enter your cloud's key and 
 
 The details you pass that first time will be saved locally for the next runs.
 
-If you'd like to change one of these settings run the app with: _yarn start -c_ which will show the prompts again.
+If you'd like to change one of these settings after the first time, run the app with: _yarn start -c_ which will show the prompts again.
 
 ### Arguments
 
@@ -42,6 +46,22 @@ The app supports the following arguments:
   help:    --help or -?   	    - Show this help screen
   
 ```
+
+for exmaple run:
+
+```
+
+yarn start -k "my_cloud_key" -s "my_cloud_secret"
+```
+
+> note: if you're on an old (pre v1.0.0) version of yarn or when using _npm run start_ you need to use -- before the parameters. like this:
+
+```
+
+npm run start -- -k "my_cloud_key" -s "my_cloud_secret" 
+```
+
+to change the key and secret to use for the signature without showing the prompts.
  
 ## Code Examples
 
