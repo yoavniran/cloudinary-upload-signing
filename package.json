@@ -12,6 +12,6 @@
     "command-line-args": "^5.0.2",
     "fs-extra": "^5.0.0",
     "prompt": "^1.0.0",
-    "smocker": "^1.0.0"
+    "smocker": "^1.0.1"
   }
 }

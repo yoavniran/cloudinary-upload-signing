@@ -202,11 +202,19 @@ prompt@^1.0.0:
     utile "0.3.x"
     winston "2.1.x"
 
+querystringify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.0.0.tgz#fa3ed6e68eb15159457c89b37bc6472833195755"
+
 read@1.0.x:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/read/-/read-1.0.7.tgz#b3da19bd052431a97671d44a42634adf710b40c4"
   dependencies:
     mute-stream "~0.0.4"
+
+requires-port@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
 revalidator@0.1.x:
   version "0.1.8"
@@ -218,13 +226,14 @@ rimraf@2.x.x:
   dependencies:
     glob "^7.0.5"
 
-smocker@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/smocker/-/smocker-1.0.0.tgz#c31373fd75833ab2d294b26b4567ff9ed27a40ad"
+smocker@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/smocker/-/smocker-1.0.1.tgz#4cacf592935d6228e2ac484ab028680fd7ac8ba5"
   dependencies:
     debug "^2.2.0"
     lodash "^3.10.1"
     lru-cache "^2.7.0"
+    url-parse "^1.4.1"
 
 stack-trace@0.0.x:
   version "0.0.10"
@@ -244,6 +253,13 @@ typical@^2.6.1:
 universalify@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.1.tgz#fa71badd4437af4c148841e3b3b165f9e9e590b7"
+
+url-parse@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.1.tgz#4dec9dad3dc8585f862fed461d2e19bbf623df30"
+  dependencies:
+    querystringify "^2.0.0"
+    requires-port "^1.0.0"
 
 utile@0.3.x:
   version "0.3.0"
