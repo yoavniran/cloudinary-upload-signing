@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "nodejs example of creating a signature for cloudinary client uploads",
   "main": "index.js",
+  "bin": {
+    "cld-upload-sign": "index.js"  
+  },
   "scripts": {
     "start": "node index.js"
   },
