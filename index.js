@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const prompt = require("prompt"),
     smocker = require("smocker"),
     parseArgs = require("command-line-args"),
