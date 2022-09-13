@@ -6,9 +6,14 @@ module.exports = (key, secret, params) => {
     let hashString = Object.keys(params)
         .sort()
         .reduce((res, key) =>
-            res + (res ? "&" : "") + `${key}=${params[key]}`, "");
-    
-    shasum.update(hashString + secret);
+	        //ignore empty params
+	        params[key] ?
+		        (res + (res ? "&" : "") + `${key}=${params[key]}`) :
+	        res, "");
+
+	console.log(`signing string: '${hashString}'`);
+
+	shasum.update(hashString + secret);
 
     const signature =  shasum.digest("hex");
     console.log(`returning signature: '${signature}' for params = `, params);
