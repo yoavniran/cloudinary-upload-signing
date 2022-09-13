@@ -7,7 +7,7 @@ module.exports = (key, secret, params) => {
         .sort()
         .reduce((res, key) =>
 	        //ignore empty params
-	        params[key] ?
+	        params[key] !== "" ?
 		        (res + (res ? "&" : "") + `${key}=${params[key]}`) :
 	        res, "");
 
